@@ -275,8 +275,16 @@ def _is_streamsx_module(module):
             return True
         if mn.startswith('streamsx.rest'):
             return True
+        if mn.startswith('streamsx.scripts'):
+            return True
+        if mn.startswith('streamsx._streams'):
+            return True
+        if mn == 'streamsx':
+            return True
         if mn == 'streamsx.ec':
             return True
         if mn == 'streamsx.st':
+            return True
+        if mn == 'streamsx.types':
             return True
     return False

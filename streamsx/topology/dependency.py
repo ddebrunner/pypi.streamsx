@@ -252,6 +252,8 @@ def _is_builtin_module(module):
     if module.__name__ in _stdlib._STD_LIB_MODULES:
         return True
     amp = os.path.abspath(module.__file__)
+    if 'site-packages' in amp:
+        return False
     if amp.startswith(_STD_MODULE_DIR):
         return True
     if not '.' in module.__name__:

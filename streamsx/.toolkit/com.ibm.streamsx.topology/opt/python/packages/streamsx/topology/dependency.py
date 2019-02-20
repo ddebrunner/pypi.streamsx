@@ -268,6 +268,8 @@ def _is_builtin_module(module):
 def _is_streamsx_module(module):
     if hasattr(module, '__name__'):
         mn = module.__name__
+        if mn == 'streamsx':
+            return True
         if not mn.startswith('streamsx.'):
             return False
         if mn.startswith('streamsx.topology'):
@@ -279,8 +281,6 @@ def _is_streamsx_module(module):
         if mn.startswith('streamsx.scripts'):
             return True
         if mn.startswith('streamsx._streams'):
-            return True
-        if mn == 'streamsx':
             return True
         if mn == 'streamsx.ec':
             return True

@@ -25,7 +25,7 @@
    <mkdir dir="release"/>
 
    <get src=
-      "file:///home/streamsadmin/hostdir/topology/dev/streamsx.topology/release-streamsx.topology/streamsx.topology-v1.12-20190219-2053.tgz"
+      "file:///home/streamsadmin/hostdir/topology/dev/streamsx.topology/release-streamsx.topology/streamsx.topology-v1.12-20190220-0028.tgz"
       dest="release.tgz"/>
    <untar src="release.tgz" dest="release" compression="gzip"/>
 

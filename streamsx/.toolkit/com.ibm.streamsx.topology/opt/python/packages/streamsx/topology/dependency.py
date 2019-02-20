@@ -197,6 +197,7 @@ class _DependencyResolver(object):
     def _add_package(self, path):
         if path == self._streamsx_topology_dir:
             return None
+        _debug.debug("_add_package: path=%s", path)
         self._packages[path] = None
     
 #####################
